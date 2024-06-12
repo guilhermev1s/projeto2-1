@@ -11,4 +11,5 @@ router.post('/auth/registro', usuarioValidador, AutenticacaoController.registrar
 router.post('/auth/login', loginValidador, AutenticacaoController.login)
 
 
+
 module.exports = router
