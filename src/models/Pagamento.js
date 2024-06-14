@@ -7,11 +7,6 @@ const schema = new mongoose.Schema(
             type: String,
             required: true
         },
-        plano: {
-            type: mongoose.SchemaTypes.ObjectId,
-            ref: 'plano',
-            required: true
-        },
         formaPagamento: {
             type: mongoose.SchemaTypes.ObjectId,
             ref: 'formaPagamento',

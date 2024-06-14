@@ -38,12 +38,7 @@ const schema = new mongoose.Schema(
             bairro: String,
             numero: String,
             complemento: String
-        },
-        cargo: {
-            type: mongoose.SchemaTypes.ObjectId,
-            ref: 'cargo',
-            required: false
-        },
+        }
     },
     {
         timestamps: true

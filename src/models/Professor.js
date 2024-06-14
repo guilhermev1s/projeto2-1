@@ -39,11 +39,6 @@ const schema = new mongoose.Schema(
             numero: String,
             complemento: String
         },
-        cargo: {
-            type: mongoose.SchemaTypes.ObjectId,
-            ref: 'cargo',
-            required: false
-        },
         aulas: {
             type: mongoose.SchemaTypes.ObjectId,
             ref: 'aulas',

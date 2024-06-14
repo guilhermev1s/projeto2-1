@@ -1,4 +1,4 @@
-const Aulas = require('../models/Aulas')
+const Aulas = require('../models/AulasColetivas.js')
 
 async function create(req, res) {
     const aula = new Aulas(req.body)
@@ -7,11 +7,11 @@ async function create(req, res) {
 }
 
 async function getAll(req, res) {
-    res.json(await Aulas.find().populate(['cargo', 'departamento']))
+    res.json(await Aulas.find())
 }
 
 async function getById(req, res) {
-    const aula = await Aulas.findById(req.params.id).populate(['cargo', 'departamento'])
+    const aula = await Aulas.findById(req.params.id)
     if (aula) {
         res.json(aula)
     } else {

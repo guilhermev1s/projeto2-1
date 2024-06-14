@@ -5,8 +5,8 @@ const router = express.Router()
 const FuncionarioController = require('../controllers/FuncionarioController')
 const ProfessorController = require('../controllers/ProfessorController')
 const AulasController = require('../controllers/AulasController')
-const PagamentosController = require('../controllers/PagamentosController')
-const ClientesController = require('../controllers/ClientesController')
+const PagamentoController = require('../controllers/PagamentoController')
+const ClienteController = require('../controllers/ClienteController')
 
 // validators
 const { validarId } = require('../validators/IdValidator')
@@ -41,18 +41,18 @@ router.put('/aulas/:id', validarId, AulasController.update)
 router.delete('/aulas/:id', validarId, AulasController.remove)
 
 // Pagamentos
-router.post('/pagamentos', pagamentoValidador, PagamentosController.create)
-router.get('/pagamentos', PagamentosController.getAll)
-router.get('/pagamentos/:id', validarId, PagamentosController.getById)
-router.put('/pagamentos/:id', validarId, PagamentosController.update)
-router.delete('/pagamentos/:id', validarId, PagamentosController.remove)
+router.post('/pagamentos', pagamentoValidador, PagamentoController.create)
+router.get('/pagamentos', PagamentoController.getAll)
+router.get('/pagamentos/:id', validarId, PagamentoController.getById)
+router.put('/pagamentos/:id', validarId, PagamentoController.update)
+router.delete('/pagamentos/:id', validarId, PagamentoController.remove)
 
 //Clientes
-router.post('/clientes', clienteValidador, ClientesController.create)
-router.get('/clientes', ClientesController.getAll)
-router.get('/clientes/:id', validarId, ClientesController.getById)
-router.put('/clientes/:id', validarId, ClientesController.update)
-router.delete('/clientes/:id', validarId, ClientesController.remove)
+router.post('/clientes', clienteValidador, ClienteController.create)
+router.get('/clientes', ClienteController.getAll)
+router.get('/clientes/:id', validarId, ClienteController.getById)
+router.put('/clientes/:id', validarId, ClienteController.update)
+router.delete('/clientes/:id', validarId, ClienteController.remove)
 
 
 

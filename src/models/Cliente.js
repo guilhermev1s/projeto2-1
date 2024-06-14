@@ -38,17 +38,7 @@ const schema = new mongoose.Schema(
             bairro: String,
             numero: String,
             complemento: String
-        },
-        plano: {
-            type: mongoose.SchemaTypes.ObjectId,
-            ref: 'plano',
-            required: false
-        },
-       Pagamento : {
-            type: mongoose.SchemaTypes.ObjectId,
-            ref: 'pagamento',
-            required: true
-        },
+        }
     },
     {
         timestamps: true

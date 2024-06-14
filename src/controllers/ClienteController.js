@@ -7,11 +7,11 @@ async function create(req, res) {
 }
 
 async function getAll(req, res) {
-    res.json(await Cliente.find().populate(['plano', 'pagamento']))
+    res.json(await Cliente.find())
 }
 
 async function getById(req, res) {
-    const cliente = await Cliente.findById(req.params.id).populate(['plano', 'pagamento'])
+    const cliente = await Cliente.findById(req.params.id)
     if (cliente) {
         res.json(cliente)
     } else {

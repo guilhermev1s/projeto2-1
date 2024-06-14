@@ -7,11 +7,11 @@ async function create(req, res) {
 }
 
 async function getAll(req, res) {
-    res.json(await Professor.find().populate(['cargo', 'aulas']))
+    res.json(await Professor.find())
 }
 
 async function getById(req, res) {
-    const professor = await Professor.findById(req.params.id).populate(['cargo', 'aulas'])
+    const professor = await Professor.findById(req.params.id)
     if (professor) {
         res.json(professor)
     } else {
