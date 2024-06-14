@@ -2,14 +2,8 @@ const mongoose = require('mongoose')
 
 const schema = new mongoose.Schema(
     {
-       
-        cliente: {
-            type: String,
-            required: true
-        },
         formaPagamento: {
-            type: mongoose.SchemaTypes.ObjectId,
-            ref: 'formaPagamento',
+            type: String,
             required: false
         },
         dataVencimento: {
@@ -23,7 +17,12 @@ const schema = new mongoose.Schema(
         valor: {
             type: Number,
             required: true
-        }
+        },
+        cliente: {
+            type: mongoose.SchemaTypes.ObjectId,
+            ref: 'cliente',
+            required: false
+        },
     },
     {
         timestamps: true
